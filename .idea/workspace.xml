@@ -2,106 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2836a3be-4c4d-4ca0-8c25-a9e75f1eef25" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/collect/ctypes/macholib/README.ctypes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/collect/ctypes/macholib/fetch_macholib" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/collect/ctypes/macholib/fetch_macholib.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/collect/distutils/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/collect/pexpect/bashrc.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/site-packages.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/AppKit/_AppKit.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/AppKit/_inlines.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/CoreFoundation/_CoreFoundation.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/CoreFoundation/_inlines.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/Foundation/_Foundation.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/Foundation/_inlines.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/empty_package/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/objc/_machsignals.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/bdist.macosx-10.6-intel/python2.7-standalone/app/temp/objc/_objc.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Frameworks/Python.framework/Python" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Frameworks/Python.framework/Resources" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Frameworks/Python.framework/Versions/2.7/Python" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Frameworks/Python.framework/Versions/2.7/Resources/Info.plist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Frameworks/Python.framework/Versions/2.7/include/python2.7/pyconfig.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Frameworks/Python.framework/Versions/Current" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Info.plist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/MacOS/RumpsExample" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/MacOS/python" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/PkgInfo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/PythonApplet.icns" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/RumpsExample.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/__boot__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/__error__.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/icer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/include/python2.7/pyconfig.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/AppKit/_AppKit.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/AppKit/_inlines.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/CoreFoundation/_CoreFoundation.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/CoreFoundation/_inlines.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/Foundation/_Foundation.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/Foundation/_inlines.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/MacOS.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/Nav.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_AE.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_Ctl.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_Dlg.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_Evt.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_File.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_Menu.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_Qd.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_Res.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_Win.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_codecs_cn.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_codecs_hk.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_codecs_iso2022.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_codecs_jp.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_codecs_kr.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_codecs_tw.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_collections.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_ctypes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_functools.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_hashlib.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_heapq.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_io.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_locale.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_multibytecodec.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_random.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_scproxy.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_socket.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_ssl.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/_struct.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/array.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/binascii.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/bz2.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/cPickle.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/cStringIO.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/datetime.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/fcntl.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/gestalt.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/grp.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/itertools.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/math.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/objc/_machsignals.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/objc/_objc.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/operator.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/pyexpat.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/resource.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/select.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/strop.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/termios.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/time.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/unicodedata.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/lib-dynload/zlib.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/rumps/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/rumps/compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/rumps/notifications.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/rumps/packages/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/rumps/packages/ordereddict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/rumps/rumps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/rumps/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/RumpsExample.app/Contents/Resources/lib/python2.7/site-packages.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rumps.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RumpsExample.py" afterPath="$PROJECT_DIR$/RumpsExample.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decorators.py" afterPath="$PROJECT_DIR$/decorators.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -115,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RumpsExample.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RumpsExample.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RumpsExample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <state relative-caret-position="-506">
+              <caret line="89" column="36" lean-forward="false" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -139,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rumps.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rumps.py" pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/rumps/rumps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13020">
+            <state relative-caret-position="873">
               <caret line="880" column="0" lean-forward="true" selection-start-line="880" selection-start-column="0" selection-end-line="880" selection-end-column="0" />
               <folding />
             </state>
@@ -179,6 +82,7 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/Rumpstest.py" />
         <option value="$PROJECT_DIR$/decorators.py" />
+        <option value="$PROJECT_DIR$/rumps.py" />
         <option value="$PROJECT_DIR$/RumpsExample.py" />
       </list>
     </option>
@@ -360,16 +264,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RumpsExample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icer.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -760,21 +654,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RumpsExample.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/rumps/rumps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="873">
+          <caret line="880" column="0" lean-forward="true" selection-start-line="880" selection-start-column="0" selection-end-line="880" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/rumps/rumps.py">
+    <entry file="file://$PROJECT_DIR$/rumps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13020">
-          <caret line="880" column="0" lean-forward="true" selection-start-line="880" selection-start-column="0" selection-end-line="880" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="79" lean-forward="true" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RumpsExample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506">
+          <caret line="89" column="36" lean-forward="false" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -56,7 +56,7 @@ class StatusBarApp(rumps.App):
                 subprocess.call("ssh-keygen -t rsa -N " + self.ssh_passphrase.text + " -f ~/.ssh/id_rsa", shell=True)      # changed this to hpcc
             # ssh - keygen - t rsa - q - f "$HOME/.ssh/id_rsa" - N""
         else:
-            print "No File is present"
+            print ("No File is present")
 
     def exists_remote(self, userid):
         """Test if a file exists at path on a host accessible with SSH."""
@@ -72,7 +72,7 @@ class StatusBarApp(rumps.App):
         path = os.chdir("/Users/" + self.login + "/.ssh")
         Files = glob.glob1(path, '*.pub')
         public_id = Files[0]
-        print public_id
+        print (public_id)
         child = pexpect.spawn("scp -o StrictHostKeyChecking=no " + "/Users/" + self.login + "/.ssh/" + public_id + " " + userid + "@hpcc.msu.edu:.ssh/authorized_keys")
         #print '/bin/cat ~/.ssh/id_rsa.pub | ssh ' + userid + '@hpcc.msu.edu -o StrictHostKeyChecking=no "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"'
         #child = pexpect.spawn("cat ~/.ssh/id_rsa.pub | ssh " + userid + "@hpcc.msu.edu -o StrictHostKeyChecking=no 'cat >> ~/.ssh/authorized_keys'")
@@ -87,7 +87,7 @@ class StatusBarApp(rumps.App):
         Attempt = 1
         while True:
             result = child.expect(['Password:', pexpect.EOF, pexpect.TIMEOUT])
-            print result, "result"
+            print (result, "result")
             if result == 0 and Max_attempts >= 1:
                 self.HPCC_PASS = rumps.Window(title="Incorrect HPCC password.   Attempt: (""/3)", message="Please re-enter your HPCC password:",
                                           dimensions=(250, 50), secure=True).run()
@@ -115,7 +115,7 @@ class StatusBarApp(rumps.App):
         if (self.key_present(UserID)): # SSH does not connect through
             print ("The SSH keys are present {}".format(self.key_present(UserID)))
         else:
-            print "Need to generate ssh keys"
+            print ("Need to generate ssh keys")
 
             self.alert = rumps.alert(title="SSH Keys",
                                      message="To mount your HPCC drive using SSHFS, you need to generate SSH Key-Based "
