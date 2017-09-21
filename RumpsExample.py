@@ -106,6 +106,9 @@ class StatusBarApp(rumps.App):
     @rumps.clicked("Mount HPCC")
     def mount(self, _):
 
+        if ( not self.check_programs()):
+            self.exit()
+
         print(self.login)
 
         self.UID = rumps.Window(title="HPCC username",message="Please enter your MSU NETID:", dimensions=(250, 50)).run()
@@ -128,7 +131,7 @@ class StatusBarApp(rumps.App):
                                      ok="Continue", cancel="Cancel")
 
             if self.alert == 0:
-                    sys.exit(0)
+                    sys.exit()
             self.gen_key()
             self.push_key(UserID)
 
@@ -157,8 +160,9 @@ class StatusBarApp(rumps.App):
 
     @rumps.clicked("More info")
     def more_info(self,_):
-        b = webbrowser.get('safari')
-        b.open("https://icer.msu.edu")
+        rumps.MenuItem("More Info")
+        #b = webbrowser.get('safari')
+        #b.open("https://icer.msu.edu")
 
 if __name__ == "__main__":
     StatusBarApp().run()
