@@ -8,7 +8,7 @@ import sys
 import subprocess
 import rumps
 import pexpect
-
+import pip
 # var = subprocess.check_output(["ssh -o 'BatchMode=yes' zahidmuh@hpcc.msu.edu 'echo 2>&1' && echo 'OK' || echo 'NOK' "],shell=True)
 
 
@@ -31,7 +31,7 @@ import pexpect
 #     print ("Password: {}".format(password.text))
 
 
-cond = True
+
 
 
 # while cond:
@@ -41,6 +41,11 @@ cond = True
 #     else:
 #         print "kobe"
 
+if (os.system("pip freeze |grep 'pexpect'")) != 0:
+    print "Need to pip install pexpect"
+    pip.main(['install',"pexpect"])
+else:
+    print "Already have pexpect"
 
 def test():
     try:

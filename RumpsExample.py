@@ -9,6 +9,7 @@ import pexpect
 import getpass
 import sys
 import webbrowser
+import pip
 
 class StatusBarApp(rumps.App):
 
@@ -34,9 +35,10 @@ class StatusBarApp(rumps.App):
             subprocess.check_call("pkgutil --pkg-info com.github.osxfuse.pkg.SSHFS", shell=True)
             return True
         except subprocess.CalledProcessError:
-            #self.error_msg = rumps.alert(title="Software requirements",
-            #                             message="Your computer is missing some software requirements to mount your HPCC file system with SSHFS. Please click on the link and install the necessary packages.")
             return False
+
+    def install_module(self,package):
+        pip.main(['install',package])
 
     def key_present(self,userid):
         # Batchmode=yes and password less connectivity is enable the command execute successfully on remote, else it will return error and continues.
@@ -48,12 +50,12 @@ class StatusBarApp(rumps.App):
 
     def gen_key(self):
         #home = os.path.expanduser('~')
-        if (os.path.isfile("~/Users/icer3/.ssh/id_rsa") == False):
+        if (os.path.isfile("~/Users/icer3/.ssh/id_rsa_hpcc") == False):
             self.ssh_passphrase = rumps.Window(title="RSA private key passphrase",message="Enter passphrase (empty for no passphrase:)",secure=True,dimensions=(250,50)).run()
             if not self.ssh_passphrase.text:
-                subprocess.call("ssh-keygen -t rsa -q -f  ~/.ssh/id_rsa", shell=True)     # changed this to hpcc
+                subprocess.call("ssh-keygen -t rsa -f  ~/.ssh/id_rsa_hpcc", shell=True)     # changed this to hpcc
             else:
-                subprocess.call("ssh-keygen -t rsa -N " + self.ssh_passphrase.text + " -f ~/.ssh/id_rsa", shell=True)      # changed this to hpcc
+                subprocess.call("ssh-keygen -t rsa -N " + self.ssh_passphrase.text + " -f ~/.ssh/id_rsa_hpcc", shell=True)      # changed this to hpcc
             # ssh - keygen - t rsa - q - f "$HOME/.ssh/id_rsa" - N""
         else:
             print ("No File is present")
@@ -100,6 +102,8 @@ class StatusBarApp(rumps.App):
                 break
             Max_attempts -= 1
 
+        del mypassword
+
     def drive_mounted(self):
         return (os.path.exists(self.local_mount_point + self.path))
 
@@ -107,11 +111,15 @@ class StatusBarApp(rumps.App):
     def mount(self, _):
 
         if ( not self.check_programs()):
+            self.rumps.Window(title="Missing Requirements", message ="Need to install MacFUSE and SSHFS. Link: https://osxfuse.github.io")
             self.exit()
+
+        if (os.system("pip freeze | grep 'pexpect'")) != 0:  # if it does not == 0 it is not installed so then call pip install function
+            self.install_module("pexpect")
 
         print(self.login)
 
-        self.UID = rumps.Window(title="HPCC username",message="Please enter your MSU NETID:", dimensions=(250, 50)).run()
+        self.UID = rumps.Window(title="HPCCa username",message="Please enter your MSU NETID:", dimensions=(250, 50)).run()
 
         UserID = str(self.UID.text)  # since rumps.Window returns its type from window class we need to convert it to string
 
@@ -135,7 +143,7 @@ class StatusBarApp(rumps.App):
             self.gen_key()
             self.push_key(UserID)
 
-        sshfs_cmd = "/usr/local/bin/sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa"
+        sshfs_cmd = "/usr/local/bin/sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa_hpcc"
         remote_host = "@hpcc.msu.edu:/mnt/home/"
         options = "-o cache=no -o nolocalcaches -o volname=hpcc -o StrictHostKeyChecking=no"
         # StrictHostKeyChecking ignores authentication for first time use
@@ -161,8 +169,9 @@ class StatusBarApp(rumps.App):
     @rumps.clicked("More info")
     def more_info(self,_):
         rumps.MenuItem("More Info")
-        #b = webbrowser.get('safari')
-        #b.open("https://icer.msu.edu")
+        b = webbrowser.get('safari')
+        b.open("https://icer.msu.edu")
+
 
 if __name__ == "__main__":
     StatusBarApp().run()
