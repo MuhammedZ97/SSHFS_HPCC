@@ -9,7 +9,7 @@ import pexpect
 import getpass
 import sys
 import webbrowser
-import pip
+#import pip
 
 class StatusBarApp(rumps.App):
 
@@ -30,15 +30,13 @@ class StatusBarApp(rumps.App):
         rumps.debug_mode(True)
 
     def check_programs(self):
-        try:
-            subprocess.check_call("pkgutil --pkg-info com.github.osxfuse.pkg.MacFUSE", shell=True)
-            subprocess.check_call("pkgutil --pkg-info com.github.osxfuse.pkg.SSHFS", shell=True)
+        check = os.system("pkgutil --pkgs | grep 'FUSE'")
+        check1 = os.system("pkgutil --pkgs | grep 'SSHFS'")
+        if (check == 0 and check1 == 0):
             return True
-        except subprocess.CalledProcessError:
-            return False
 
-    def install_module(self,package):
-        pip.main(['install',package])
+    #def install_module(self,package):
+        #pip.main(['install',package])
 
     def key_present(self,userid):
         # Batchmode=yes and password less connectivity is enable the command execute successfully on remote, else it will return error and continues.
@@ -114,12 +112,12 @@ class StatusBarApp(rumps.App):
             self.rumps.Window(title="Missing Requirements", message ="Need to install MacFUSE and SSHFS. Link: https://osxfuse.github.io")
             self.exit()
 
-        if (os.system("pip freeze | grep 'pexpect'")) != 0:  # if it does not == 0 it is not installed so then call pip install function
-            self.install_module("pexpect")
+        #if (os.system("pip freeze | grep 'pexpect'")) != 0:  # if it does not == 0 it is not installed so then call pip install function
+        #  self.install_module("pexpect")
 
         print(self.login)
 
-        self.UID = rumps.Window(title="HPCCa username",message="Please enter your MSU NETID:", dimensions=(250, 50)).run()
+        self.UID = rumps.Window(title="HPCC username",message="Please enter your MSU NETID:", dimensions=(250, 50)).run()
 
         UserID = str(self.UID.text)  # since rumps.Window returns its type from window class we need to convert it to string
 
