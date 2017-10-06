@@ -9,7 +9,6 @@ import pexpect
 import getpass
 import sys
 import webbrowser
-#import pip
 
 class StatusBarApp(rumps.App):
 
@@ -17,11 +16,8 @@ class StatusBarApp(rumps.App):
 
     def __init__(self):
         super(StatusBarApp, self).__init__("SSHFS") # refers to parent base class without explicitly calling their intits methods
-        self.menu = [rumps.MenuItem('Mount HPCC',callback=self.mount,key='q'),rumps.MenuItem('Unmount',callback=self.unmount),
-                    {
-                        "More info":{"ICER","SSH KEYS"}
-                    }
-                    ]
+        self.menu = [rumps.MenuItem('Mount HPCC',callback=self.mount,key='q'), rumps.MenuItem('Unmount',callback=self.unmount),
+                     [rumps.MenuItem("More info"),[rumps.MenuItem("ICER",callback=self.icer),rumps.MenuItem("SSH KEYS",callback=self.SSH_Keys)]]]
         
         self.icon = 'icer.png'
         self.local_mount_point = "/Volumes"
@@ -166,9 +162,16 @@ class StatusBarApp(rumps.App):
 
     @rumps.clicked("More info")
     def more_info(self,_):
-        rumps.MenuItem("More Info")
-        b = webbrowser.get('safari')
-        b.open("https://icer.msu.edu")
+        print self.menu["More info"].values()
+
+    def icer(self,_):
+        icerPage = webbrowser.get('chrome')
+        icerPage.open("https://icer.msu.edu")
+
+    def SSH_Keys(self,_):
+        SSH_keys_page = webbrowser.get("chrome")
+        SSH_keys_page.open("https://wiki.hpcc.msu.edu/display/hpccdocs/Mapping+HPC+drives+with+SSHFS")
+
 
 
 if __name__ == "__main__":

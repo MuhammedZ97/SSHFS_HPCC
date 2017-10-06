@@ -2,6 +2,7 @@ from setuptools import setup
 
 APP = ['RumpsExample.py']
 DATA_FILES = []
+USER_BASE=None
 OPTIONS = {
     'argv_emulation': True,
     'plist': {
@@ -12,7 +13,7 @@ OPTIONS = {
 
 setup(
     app=APP,
-    #data_files=DATA_FILES,
+    data_files=DATA_FILES,
     options={'py2app': OPTIONS},
     setup_requires=['py2app'],
 )

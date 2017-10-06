@@ -9,6 +9,7 @@ import subprocess
 import rumps
 import pexpect
 import pip
+import site
 # var = subprocess.check_output(["ssh -o 'BatchMode=yes' zahidmuh@hpcc.msu.edu 'echo 2>&1' && echo 'OK' || echo 'NOK' "],shell=True)
 
 
@@ -40,6 +41,26 @@ import pip
 #         break
 #     else:
 #         print "kobe"
+
+
+print(site.getuserbase())
+
+
+check = os.system("pkgutil --pkgs | grep 'FUSE'")
+print check
+
+check1 = os.system("pkgutil --pkgs | grep 'SSHFS'")
+print check1
+
+
+if (check == 0 and check1 == 0):
+    print "It works"
+
+
+
+
+
+
 
 if (os.system("pip freeze |grep 'pexpect'")) != 0:
     print "Need to pip install pexpect"
