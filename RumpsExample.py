@@ -43,13 +43,14 @@ class StatusBarApp(rumps.App):
         return False
 
     def gen_key(self):
-        #home = os.path.expanduser('~')
-        if (os.path.isfile("~/Users/icer3/.ssh/id_rsa_hpcc") == False):
+        #home = ("~/Users/"+self.login+"/.ssh/id_rsa")
+        #print(home)
+        if (os.path.isfile("~/Users/"+self.login+"/.ssh/id_rsa") == False):
             self.ssh_passphrase = rumps.Window(title="RSA private key passphrase",message="Enter passphrase (empty for no passphrase:)",secure=True,dimensions=(250,50)).run()
             if not self.ssh_passphrase.text:
-                subprocess.call("ssh-keygen -t rsa -f  ~/.ssh/id_rsa_hpcc", shell=True)     # changed this to hpcc
+                subprocess.call("ssh-keygen -t rsa -f  ~/.ssh/id_rsa", shell=True)     # changed this to hpcc
             else:
-                subprocess.call("ssh-keygen -t rsa -N " + self.ssh_passphrase.text + " -f ~/.ssh/id_rsa_hpcc", shell=True)      # changed this to hpcc
+                subprocess.call("ssh-keygen -t rsa -N " + self.ssh_passphrase.text + " -f ~/.ssh/id_rsa", shell=True)      # changed this to hpcc
             # ssh - keygen - t rsa - q - f "$HOME/.ssh/id_rsa" - N""
         else:
             print ("No File is present")
@@ -90,7 +91,7 @@ class StatusBarApp(rumps.App):
                 mypassword = str(self.HPCC_PASS.text)
                 child.sendline(mypassword)
             elif Max_attempts < 1:
-                self.message = rumps.alert(title="Incorrect HPCC password and userID",message="Please check your that you entered your HPCC username or Password Correctly.")
+                self.message = self.alert(title="Incorrect HPCC password and userID",message="Please check your that you entered your HPCC username or Password Correctly.")
                 sys.exit(0)
             else:
                 break
@@ -105,11 +106,11 @@ class StatusBarApp(rumps.App):
     def mount(self, _):
 
         if ( not self.check_programs()):
-            self.rumps.Window(title="Missing Requirements", message ="Need to install MacFUSE and SSHFS. Link: https://osxfuse.github.io")
-            self.exit()
+          rumps.Window(title="Missing Requirements", message ="Need to install MacFUSE and SSHFS. Link: https://osxfuse.github.io")
+          self.exit()
 
-        #if (os.system("pip freeze | grep 'pexpect'")) != 0:  # if it does not == 0 it is not installed so then call pip install function
-        #  self.install_module("pexpect")
+       # if (os.system("pip freeze | grep 'pexpect'")) != 0:  # if it does not == 0 it is not installed so then call pip install function
+            #self.install_module("pexpect")
 
         print(self.login)
 
@@ -137,7 +138,7 @@ class StatusBarApp(rumps.App):
             self.gen_key()
             self.push_key(UserID)
 
-        sshfs_cmd = "/usr/local/bin/sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa_hpcc"
+        sshfs_cmd = "/usr/local/bin/sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa"
         remote_host = "@hpcc.msu.edu:/mnt/home/"
         options = "-o cache=no -o nolocalcaches -o volname=hpcc -o StrictHostKeyChecking=no"
         # StrictHostKeyChecking ignores authentication for first time use
@@ -165,14 +166,12 @@ class StatusBarApp(rumps.App):
         print self.menu["More info"].values()
 
     def icer(self,_):
-        icerPage = webbrowser.get('chrome')
+        icerPage = webbrowser.get('Safari')
         icerPage.open("https://icer.msu.edu")
 
     def SSH_Keys(self,_):
-        SSH_keys_page = webbrowser.get("chrome")
+        SSH_keys_page = webbrowser.get("Safari")
         SSH_keys_page.open("https://wiki.hpcc.msu.edu/display/hpccdocs/Mapping+HPC+drives+with+SSHFS")
-
-
 
 if __name__ == "__main__":
     StatusBarApp().run()
